@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp6.MainPage"
+             Title="Kalkulator śladu węglowego"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Kalkulator Śladu Węglowego"
+                   FontSize="40"
+                   HorizontalOptions="Center"
+                   TextColor="DarkGreen" />
+
+            
+            <Label Text="1. Jak często korzystasz z transportu publicznego?" />
+            <Picker x:Name="wyborTransportu" Title="Wybierz opcję">
+                <Picker.Items>
+                    <x:String>Bardzo często</x:String>
+                    <x:String>Czasami</x:String>
+                    <x:String>Bardzo rzadko</x:String>
+                    <x:String>Wcale</x:String>
+                </Picker.Items>
+            </Picker>
+            
+            
+
+            
+            <Label Text="2. Ile kilometrów miesięcznie jeździsz samochodem?" />
+            <Entry x:Name="iloscKilometrow" Placeholder="Wpisz liczbę kilometrów"
+                   Keyboard="Numeric" />
+
+            <Label Text="3. Na co zasilany jest twoj samochod?" />
+            <Picker x:Name="zasilanieSamochodu" Title="Wybierz opcję">
+                <Picker.Items>
+                    <x:String>Benzyna</x:String>
+                    <x:String>Gaz</x:String>
+                    <x:String>Samochód elektryczny</x:String>
+                    <x:String>nie mam samochodu</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="4.Ile m2 ma twój dom/mieszkanie" />
+            <Entry x:Name="m2" Placeholder="Wpisz wielkość swojego domu/mieszkania w m2"
+                   Keyboard="Numeric" />
+
+
+            <Label Text="5. Czym ogrzewasz dom?"/>
+            <Picker x:Name="ogrzewanieDomu" Title="Wybierz opcję">
+                <Picker.Items>
+                    <x:String>Węgiel</x:String>
+                    <x:String>Drewno</x:String>
+                    <x:String>Prąd</x:String>
+                    <x:String>Gaz</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="6. Czy posiadasz panele fotowoltaiczne?"/>
+            <Picker x:Name="paneleFoto" Title="Wybierz opcję">
+                <Picker.Items>
+                   
+                    <x:String>Tak</x:String>
+                    <x:String>Nie</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="7. Jak opisałbyś swoją dietę?" />
+            <Picker x:Name="dieta" Title="Wybierz opcję">
+                <Picker.Items>
+                    <x:String>Wegańska</x:String>
+                    <x:String>Wegetariańska</x:String>
+                    <x:String>Mieszana (mięso i rośliny)</x:String>
+                    <x:String>Głównie mięso</x:String>
+                </Picker.Items>
+            </Picker>
+
+            
+            <Label Text="8. Jakie jest Twoje miesięczne zużycie energii elektrycznej (kWh)?" />
+            <Entry x:Name="ZuzycieKwh" Placeholder="Wpisz liczbę kWh"
+                   Keyboard="Numeric" />
+
+           
+            <Label Text="9. Ile odpadów wytwarzasz miesięcznie (kg)?" />
+            <Entry x:Name="miesieczneOdpady" Placeholder="Wpisz liczbę kilogramów"
+                   Keyboard="Numeric" />
+
+            <Label x:Name="wynik" Text="Tutaj pojawi sie wynik" FontSize="24" TextColor="DarkGreen" HorizontalOptions="Center"/>
+
+
+
+            <Button Text="Oblicz ślad węglowy"
+                    BackgroundColor="DarkGreen"
+                    TextColor="White"
+                    x:Name="oblicz"
+                    Clicked="ObliczSladWeglowy"
+                    CornerRadius="10"
+                    HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
