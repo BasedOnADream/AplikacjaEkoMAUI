@@ -5,8 +5,10 @@
              Title="wyzwania">
     <VerticalStackLayout>
         <Label 
+            x:Name="wyzwanie"
             Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
+            VerticalOptions="Center"
+            FontSize="32"
             HorizontalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>
